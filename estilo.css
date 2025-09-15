@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  nav {
+    background-color: #ffffff;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 19px;
+    padding-right: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px !important;
+  }
+
+  nav ul li a:hover {
+    background-color: #9b1f1f;
+    color: #f1f1f1;
+  }
+
+  /* SUBMENU OCULTO */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  .submenu li a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+  }
+
+  .submenu li .submenu-a:hover{
+    color: #9b1f1f;
+    background-color: #ffffff;
+  }
+
+  /* CLASE ACTIVA PARA MOSTRAR EL SUBMENU */
+  .submenu.show {
+    display: flex;
+  }
+
+  .nav-container {
+    background-color: #ffffff;
+  }
+
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Si necesitás controlar el tamaño del logo sin romper el diseño */
+  .nav-inner img {
+    max-height: 40px;
+    height: auto;
+    width: auto;
+    padding: 5px;
+    padding-left:40px ;
+  }
+
+
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    width: 300%;
+    height: 100%;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Overlay siempre fijo, no cambia con el slide */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+  }
+
+  .overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #000;
+  }
+
+  .overlay button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: #9b1f1f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /* Ocultamos botones manuales */
+  .carousel-buttons {
+    display: none;
+  }
+
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Ajustá opacidad si querés */
+    z-index: 1;
+  }
+
+
+  .contenedor-valores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  .valor {
+    flex: 1 1 250px;
+    margin: 20px;
+    max-width: 300px;
+  }
+  .valor img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .valor h3 {
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+  }
+  .valor p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+  }
+  .intro-texto {
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  .intro-texto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .intro-texto p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 16px;
+  }
+
+  .contenedor-valores button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: #15365f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+    transition: 0.3s;
+  }
+
+  .contenedor-valores button:hover {
+    background-color: #9b1f1f;
+  }
+
+  .quienes-somos {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 400px;
+  }
+
+  .quienes-somos .fondo {
+    position: relative;
+    flex: 1;
+    background-image: url(/img/brand-overlay.png); /* Cambiá la ruta si hace falta */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    min-height: 400px;
+  }
+
+  .quienes-somos .fondo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* El dark overlay */
+    z-index: 1;
+  }
+
+  .quienes-somos .contenido {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .quienes-somos .contenido h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .quienes-somos .descripcion {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  .quienes-somos .descripcion p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    color: #15365f;
+    text-align: justify;
+  }
+  .nuestra-mision {
+    background-color: #15365fe3;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .nuestra-mision h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .nuestra-mision .linea {
+    width: 60px;
+    height: 5px;
+    background-color: white;
+    margin: 15px auto;
+    border-radius: 5px;
+  }
+
+  .nuestra-mision .descripcion {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .iconos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .icono {
+    max-width: 200px;
+  }
+
+  .icono img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .icono p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .banner
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px;
+    margin: 1rem auto;
+}
+
+.descripcion p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+}
+
+.resaltado {
+    color: #b40000;
+    font-weight: bold;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.tarjeta p {
+    font-size: 0.95rem;
+}
+
+.footer {
+  background-color: #c4c4c4;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+    margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* Columnas */
+.footer-column {
+  min-width: 200px;
+  padding: 10px;
+}
+
+/* Columna izquierda (menú) */
+.footer-left {
+  text-align: left;
+  display: flex;
+}
+
+.footer-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-left ul li {
+  margin: 8px 0;
+
+}
+
+.footer-left ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Centro */
+.footer-center h2 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.footer-center .slogan {
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.footer-center .links a,
+.footer-center .credits a {
+  color: black;
+  text-decoration: none;
+  margin: 15px 10px;
+}
+
+/* Derecha */
+.footer-right h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-right .social-icons img {
+  height: 24px;
+  margin: 0 5px;
+}
+
+/* Logos a los extremos */
+.logo-side {
+  width: 190px;
+  margin: 10px 0;
+  padding-left: 30px ;
+
+}
+
+.logo-rc {
+  width: 180px !important;
+  margin: 10px 0;
+  padding-left: 30px ;
+  padding-right: 30px;
+
+}
+
+.footer-right {
+  display: flex;
+  text-align: right;
+}
+
+p{
+  margin: 15px;
+}
+
+.valor {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.valor.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.adultos-img{
+    width: 160px !important;
+  }
+
+.ecyd-img{
+    width: 80px !important;
+  }

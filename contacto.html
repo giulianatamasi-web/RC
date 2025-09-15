@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regnum Christi Mano amiga</title>
+  <link rel="stylesheet" href="/css/contacto.css" />
+  <link rel="shortcut icon" href="/img/icono.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+   <nav class="nav-container">
+             <nav class="nav-container">
+            <div class="nav-inner">
+              <img src="/img/header.png" alt="logo-regnum-christi" width="150px" href="index.html">
+              <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li>
+                  <a href="#" id="toggleDropdown2">APOSTOLADOS ▾</a>
+                  <ul class="submenu2" id="submenu2">
+                    <li><a class=submenu-a href="/html/ecyd.html">ECYD</a></li>
+                    <li><a class=submenu-a href="/html/jm.html">JUVENTUD MISIONERA</a></li>
+                    <li><a class=submenu-a href="#">ADULTOS RC</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">¿QUIÉNES SOMOS?</a></li>
+                <li><a href="/html/contacto.html">CONTACTO</a></li>
+              </ul>
+            </div>
+          </nav>
+  </header>
+  <main class="contact-container">
+      <div class="left">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para responder tus preguntas y acompañarte en tu camino.</p>
+      </div>
+      <div class="right">
+      <form action="https://formspree.io/f/mpwdvjdj" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required/>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/js/contacto.js"></script>
+</body>
+</html>
